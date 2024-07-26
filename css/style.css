@@ -1,0 +1,199 @@
+.logo-slider {
+    background: white;
+    -webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
+            box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .logo-slider::before, .logo-slider::after {
+    background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+  .logo-slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+  }
+  .logo-slider::before {
+    left: 0;
+    top: 0;
+  }
+  .logo-slider .logo-slide-track {
+    -webkit-animation: logo-scroll 40s linear infinite;
+            animation: logo-scroll 40s linear infinite;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  .logo-slider .slide {
+    height: 100px;
+    width: 250px;
+  }
+  
+  @-webkit-keyframes logo-scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  @keyframes logo-scroll {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(calc(-250px * 7));
+              transform: translateX(calc(-250px * 7));
+    }
+  }
+
+
+:root {
+    --primary-color: #6f00ff;
+    --secondary-color:rgba(255, 255, 255, .4);
+}
+
+#service-section {
+    min-height: 740px;
+    width: 100%;
+    background: #20223a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#service-section h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#service-section h2::after {
+    position: absolute;
+    content: " ";
+    top: 30%;
+    left: -30px;
+    height: 0px;
+    width: 0px;
+    border-top: 20px solid transparent;
+    border-left: 20px solid var(--primary-color);
+}
+
+#service-section h2::before {
+    position: absolute;
+    content: " ";
+    top: 30%;
+    left: -30px;
+    height: 0px;
+    width: 0px;
+    border-top: 20px solid transparent;
+    border-right: 20px solid var(--primary-color);
+}
+
+#service-section #peragraph{
+    width: 40%;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    line-height: 1.5rem;
+    white-space: 1px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    z-index: 9;
+    margin-top: 20px;
+}
+
+.cards .card {
+    min-height: 350px;
+    width: 450px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 8%;
+    background: rgb(65, 62, 105);
+    position: relative;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.cards .card::before {
+    position: absolute;
+    content: " ";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: var(--primary-color);
+    transform: rotate(0deg);
+    z-index: -1;
+}
+
+.cards .card:hover.card::before {
+    transform: rotate(10deg);
+}
+
+.cards .card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.cards .card h3 {
+    font-size: 1.8rem;
+    color: azure;
+    margin-bottom: 10px;
+}
+
+.cards .card .content p {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+@media (max-width:1920px) {
+    #service-section h2 {
+        margin-top: 30px;
+    }
+    .cards {
+        grid-template-columns: repeat(3,1fr);
+    }
+    #service-section #peragraph {
+        width: 80%;
+    }
+}
+@media(max-width:900px) {
+    .cards .card {
+        height: 300px;
+        width: 400px;
+
+    }
+}
+
+
+
