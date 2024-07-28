@@ -80,7 +80,7 @@
 
 #service-section h2 {
     color: #fff;
-    font-size: 2rem;
+    font-size: 7rem;
     margin-bottom: 20px;
     position: relative;
 }
@@ -195,5 +195,38 @@
     }
 }
 
+.container-gal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px 0 20px;
+    font-size: 28px;
+    padding: 80px;
+}
 
+.container-gal .heiding {
+
+}
+
+.container-gal .heiding h3 {
+    font-size: 5em;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #20223a;
+}
+
+.container-gal .heiding h3 span {
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.container-gal .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
 
